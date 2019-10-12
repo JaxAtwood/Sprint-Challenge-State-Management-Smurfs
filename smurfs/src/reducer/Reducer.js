@@ -7,7 +7,7 @@ export const initialState = {
 };
 
 export const reducer = (state = initialState, action) => {
-    switch(action.type) {
+    switch (action.type) {
         case START_FETCHING:
             return {
                 ...state,
@@ -19,7 +19,7 @@ export const reducer = (state = initialState, action) => {
                 ...state,
                 isFetching: false,
                 error: "",
-                smurf: action.payload.data
+                smurf: action.payload
             }
         case FETCH_FAILURE:
             return {
